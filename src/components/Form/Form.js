@@ -41,7 +41,7 @@ const Form = ({addTrick}) => {
           <option>switch</option>
       </select>
       
-      <input
+      <input className='trick-name'
         type='text'
         name='name'
         placeholder='Name of Trick'
@@ -61,7 +61,7 @@ const Form = ({addTrick}) => {
           <option>Stairs</option>
           <option>Pool</option>
       </select>
-      <input
+      <input className='tutorial-link'
         type='text'
         name='link'
         placeholder='Link to Tutorial'
