@@ -1,4 +1,5 @@
 import Tricks from '../Tricks/Tricks';
+import Form from '../Form/Form';
 import { getTricks } from '../../apiCalls';
 import './App.css';
 import React, {useEffect, useState} from 'react';
@@ -30,7 +31,7 @@ function App() {
     "id": 3
     }
     ]
-  const [tricks, setTricks] = useState(dummyTricks)
+  const [tricks, setTricks] = useState([])
 
   useEffect(() => {
     getTricks()
@@ -40,10 +41,14 @@ function App() {
       })
       .catch(error => console.log(error))
   }, [])
-  
+
+
+
   return (
     <div className="App">
       <h1>Sick Trick Wish List</h1>
+      {!tricks.length && <h3>No Tricks yet, add some!</h3>}
+      <Form />
       <Tricks tricks={tricks}/>
     </div>
   );
