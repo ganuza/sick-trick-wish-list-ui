@@ -1,6 +1,7 @@
 import Tricks from '../Tricks/Tricks';
+import { getTricks } from '../../apiCalls';
 import './App.css';
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 
 
 
@@ -31,6 +32,15 @@ function App() {
     ]
   const [tricks, setTricks] = useState(dummyTricks)
 
+  useEffect(() => {
+    getTricks()
+      .then(data => {
+        console.log('App data: ', data)
+        setTricks(data)
+      })
+      .catch(error => console.log(error))
+  }, [])
+  
   return (
     <div className="App">
       <h1>Sick Trick Wish List</h1>

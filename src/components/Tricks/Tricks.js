@@ -17,7 +17,7 @@ const Tricks = ({tricks}) => {
   
   return (
     <div className='tricks-cont'>
-      <h3>hello from Tricks</h3>
+      {/* <h3>hello from Tricks</h3> */}
       {trickCards}
     </div>
   )
