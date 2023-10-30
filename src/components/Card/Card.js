@@ -3,11 +3,11 @@ import './Card.css'
 const Card = ({id, stance, name, obstacle, tutorial}) => {
 
   return (
-    <div>
-      <h4>{stance} {name}</h4>
-      <h4>Obstacle: {obstacle}</h4>
-      <h4>Link to Tutorial:</h4>
-      <h4>{tutorial}</h4>
+    <div className='card'>
+      <p>{stance} {name}</p>
+      <p>Obstacle: {obstacle}</p>
+      <p>Link to Tutorial:</p>
+      <p>{tutorial}</p>
     </div>
   )
 }
