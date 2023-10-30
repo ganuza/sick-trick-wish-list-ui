@@ -42,13 +42,15 @@ function App() {
       .catch(error => console.log(error))
   }, [])
 
-
+  const addTrick = (newTrick) => {
+    setTricks([...tricks, newTrick])
+  }
 
   return (
     <div className="App">
       <h1>Sick Trick Wish List</h1>
       {!tricks.length && <h3>No Tricks yet, add some!</h3>}
-      <Form />
+      <Form addTrick={addTrick}/>
       <Tricks tricks={tricks}/>
     </div>
   );

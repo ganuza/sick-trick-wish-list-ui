@@ -1,3 +1,12 @@
+select {
+  font-size: 18px;
+}
+
+label {
+  background-color: aliceblue;
+  font-size: 18px;
+}
+
 input {
   margin: 15px;
   width: 20%;
