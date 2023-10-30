@@ -2,9 +2,9 @@ import Card from '../Card/Card'
 import './Tricks.css'
 
 const Tricks = ({tricks}) => {
-  
-  const trickCards = () => {
-    tricks.map((trick) => {
+  console.log('Tricks tricks: ', tricks)
+
+  const trickCards = tricks.map((trick) => {
       return <Card
         id={trick.id}
         key={trick.id}
@@ -14,10 +14,10 @@ const Tricks = ({tricks}) => {
         tutorial={trick.tutorial}
       />
     })
-  }
+  
   return (
     <div className='tricks-cont'>
-      <h3>hello from Tricsks</h3>
+      <h3>hello from Tricks</h3>
       {trickCards}
     </div>
   )
